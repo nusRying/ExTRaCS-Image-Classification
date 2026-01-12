@@ -1,0 +1,16 @@
+[
+  {
+    "dataset": "HAM10000",
+    "params": {
+      "N": 1500,
+      "learningIterations": 100000,
+      "theta_sel": 0.8,
+      "p_spec": 0.4,
+      "theta_GA": 15
+    },
+    "mean_bal_acc": 0.5003943022191197,
+    "std_bal_acc": 0.000935316481710942,
+    "n_splits": 5,
+    "timestamp": "2026-01-12T01:21:11.840435"
+  }
+]
