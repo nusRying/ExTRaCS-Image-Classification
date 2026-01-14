@@ -180,7 +180,6 @@ if __name__ == "__main__":
     out_dir = os.path.join(PROJECT_ROOT, "lcs")
 
     experiments = [
-        ("ISIC2019", "LBP", "csv_outputs/isic2019_lbp.csv"),
         ("ISIC2019", "GLCM", "csv_outputs/isic2019_glcm.csv"),
         ("ISIC2019", "Wavelet", "csv_outputs/isic2019_wavelet.csv"),
         ("HAM10000", "LBP", "csv_outputs/ham10000_lbp.csv"),
