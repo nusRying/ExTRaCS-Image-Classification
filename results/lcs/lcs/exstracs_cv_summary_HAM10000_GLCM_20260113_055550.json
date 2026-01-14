@@ -1,0 +1,38 @@
+[
+  {
+    "dataset": "HAM10000",
+    "features": "GLCM",
+    "params": {
+      "N": 1500,
+      "learningIterations": 100000,
+      "theta_sel": 0.8
+    },
+    "mean_bal_acc": 0.5,
+    "std_bal_acc": 0.0,
+    "timestamp": "2026-01-13T03:28:36.540672"
+  },
+  {
+    "dataset": "HAM10000",
+    "features": "GLCM",
+    "params": {
+      "N": 2000,
+      "learningIterations": 120000,
+      "theta_sel": 0.8
+    },
+    "mean_bal_acc": 0.5,
+    "std_bal_acc": 0.0,
+    "timestamp": "2026-01-13T04:42:33.970192"
+  },
+  {
+    "dataset": "HAM10000",
+    "features": "GLCM",
+    "params": {
+      "N": 2000,
+      "learningIterations": 120000,
+      "theta_sel": 0.9
+    },
+    "mean_bal_acc": 0.5,
+    "std_bal_acc": 0.0,
+    "timestamp": "2026-01-13T05:55:50.713389"
+  }
+]

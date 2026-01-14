@@ -1,5 +1,0 @@
-include README.md
-include LICENSE
-global-include test/*
-global-include *.csv
-global-exclude defaultExportDir/*

@@ -6,11 +6,14 @@ Scripts and utilities for feature extraction and ExSTraCS experiments on skin le
 fold and summary metrics to disk.
 
 ## Project layout
-- `CleanData/`: local image folders and binary label CSVs (not generated here).
-- `csv_outputs/`: generated feature CSVs (LBP, GLCM, Wavelet) and scripts.
+- `data/clean/`: local image folders and binary label CSVs (not generated here).
+- `data/raw/`: original datasets (not generated here).
 - `features/`: reusable feature extraction helpers (wavelets, semantics).
-- `lcs/`: experiment runners and experiment outputs.
-- `scikit-ExSTraCS-master/`: local copy of the ExSTraCS implementation.
+- `results/csv/`: generated feature CSVs (LBP, GLCM, Wavelet) and scripts.
+- `results/lcs/`: experiment runners and experiment outputs.
+- `notebooks/`: exploratory notebooks.
+- `scripts/`: small helper scripts.
+- `external/scikit-ExSTraCS-master/`: local copy of the ExSTraCS implementation.
 
 ## Requirements
 - Python 3.x
@@ -21,38 +24,38 @@ fold and summary metrics to disk.
 ## Feature extraction
 LBP and GLCM (edit `DATASET_NAME` in the script):
 ```bash
-python csv_outputs/feature_extractor.py
+python results/csv/feature_extractor.py
 ```
 
 Wavelet features:
 ```bash
-python csv_outputs/create_wavelet_csv.py
+python results/csv/create_wavelet_csv.py
 ```
 
 Optional normalization for wavelet CSVs (edit paths if needed):
 ```bash
-python csv_outputs/create_wavelets_normalized.py
+python results/csv/create_wavelets_normalized.py
 ```
 
 ## Run experiments
 Baseline fit (sanity check):
 ```bash
-python lcs/run_exstracs_baseline.py
+python results/lcs/run_exstracs_baseline.py
 ```
 
 Cross-validation with parameter grid:
 ```bash
-python lcs/run_exstracs_experiments.py
+python results/lcs/run_exstracs_experiments.py
 ```
 
 Cross-validation per dataset and feature set:
 ```bash
-python lcs/run_exstracs_experiments_cv.py
+python results/lcs/run_exstracs_experiments_cv.py
 ```
 
 ## Outputs
-- Feature CSVs saved under `csv_outputs/` (e.g., `ham10000_glcm.csv`).
-- CV summaries and fold-level metrics saved under `lcs/` with timestamped names.
+- Feature CSVs saved under `results/csv/` (e.g., `ham10000_glcm.csv`).
+- CV summaries and fold-level metrics saved under `results/lcs/` with timestamped names.
 
 ## Notes
 - Input CSVs are expected to include `label` and optionally `image` columns.
